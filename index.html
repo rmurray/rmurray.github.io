@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html data-ng-app="index">
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio | Ryan Murray</title>
+	<meta name="description" content="A place to demonstrate professional experience." >
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+
+<body class="" data-ng-controller="main"> <!-- me samp homey -->
+	<div class="wrapper">
+		<div class="siteheader">
+			<div class="displayInline">
+				<a href="#/home" class="logo sprite"></a>
+				<a href="#/home" class="logoText orbitron">ryan murray</a>
+			</div>
+			<a href="https://plus.google.com/106139086974881828865/posts" target="_blank" class="sprite socialIcon gplus"></a>
+			<a href="mailto:rmurray3420@gmail.com" target="_blank" class="sprite socialIcon mail"></a>
+			<a href="https://www.linkedin.com/in/murrayryan/" target="_blank" class="sprite socialIcon li"></a>
+		</div>
+		<div class="clear"></div>
+		
+		<div class="container body-content app-container">
+			<div ng-view></div>
+		</div>
+		
+		<footer>
+			<div class="fcont left orbitron">
+				<a href="#/home">home</a>
+				<a href="#/about">about</a>
+				<a href="#/portfolio">portfolio</a>
+				<a href="#/codesamples">code samples</a>
+				<a href="#/accolades">accolades</a>
+			</div>
+			<div class="fcont mid">
+				<a href="https://github.com/rmurray" target="_blank" class="fSocialIcon fGithub sprite"></a>
+				<a href="https://www.linkedin.com/in/murrayryan/" target="_blank" class="fSocialIcon  fLinkedin sprite"></a>
+				<div class="seperator"></div>
+				<a href="https://plus.google.com/106139086974881828865/posts" target="_blank" class="fSocialIcon  fGplus sprite"></a>
+				<a href="mailto:rmurray3420@gmail.com" target="_blank" class="fSocialIcon  fEmail sprite"></a>
+			</div>
+			<div class="fcont right">
+				<div class="poweredBy">this app powered by&#58;</div>
+				<div class="pbIconCont">
+					<div class="pbIcon angular sprite"></div>
+					<div class="pbIcon jquery sprite"></div>
+					<div class="seperator"></div>
+					<div class="pbIcon html sprite"></div>
+					<div class="pbIcon css sprite"></div>
+				</div>
+			</div>
+		</footer>
+	</div> <!-- //wrapper -->
+	
+	<link rel="stylesheet" type="text/css" href="portfolio.css"></link>
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.11.0/jquery-ui.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery-1.11.1/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.11.0/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="portfolio.js"></script>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	
+</body>
+
+</html>
