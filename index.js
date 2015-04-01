@@ -24,19 +24,26 @@ angular.module("index",["ngRoute"])
 		
 		$scope.accordion = function(event) {
 			var $ele = $(event.target);
-			if($("[data-accordion='content']",$ele).hasClass("opened")) { 
-				//for now do nothing in this event, a slide will always be open. Uncomment below to close a slide that is open when clicked. 
-				//$("[data-accordion='content']",$ele).removeClass("opened").slideUp(); console.log("Just in the if...");
-			}
-			else{
-		console.log("Did we make it in here?");
-				$("[data-accordion='content']",$ele.parent()).each(function() {
+			if($("[data-accordion='content']",$ele.parent()).hasClass("opened")) { }
+			else {
+				$("[data-accordion='content']",$ele.closest("[data-accordion='accordion']")).each(function() {
 					if($(this).hasClass("opened")) { $(this).removeClass("opened").slideUp(); }
 				});
-				$("[data-accordion='content']",$ele).slideDown().addClass("opened");
+				$("[data-accordion='content']",$ele.parent()).slideDown().addClass("opened");
 				setTimeout(function(){$('html, body').animate({ scrollTop: $ele.offset().top}, 200);},450);
 			}
 		}
+		
+		$scope.toggleGroup = function(event) {
+			var $ele = $(event.target);
+			var $parent = $ele.closest("[data-transition='parent']");
+			var transClass = $ele.attr("data-transition");
+			var removeClass = $ele.attr("data-remove").split("|");
+			for(index in removeClass) {
+				$parent.removeClass(removeClass[index]);
+			}
+			setTimeout(function(){ $parent.addClass(transClass); },0);
+		};
 		
 		$scope.screenTransition = function(event) { //TODO : MOVE THIS INTO A DIRECTIVE AT SOME POINT!
 			var $ele = $(event.target);

@@ -3,33 +3,33 @@
 			<div class="summary">
 				See a view of the index for each application, with responsive views if applicable. 
 				<br>Each image links to the live site &#40;if available&#41;.
-				<br>A link to the site&#39;s GitHub repository is also available, along with a description of the site and it's distinctive features.
+				<br>Get a description of the site and its distinctive features and, link to its GitHub repository.
 			</div>
 			<div data-ng-repeat="sample in samples" class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-trans="dropdown" data-marker="transitioned" data-container="footer" data-container-trans="active" ng-click="screenTransition($event);">{{sample.id}}</h2>
+				<h2 class="pointer orbitron" data-trans="dropdown" data-marker="transitioned" data-container="footer" data-container-trans="active" data-ng-click="screenTransition($event);">{{sample.id}}</h2>
 				<div class="responsiveIconCont">
-					<div class="deskIcon sprite" data-transition="desktop" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="tabletIcon sprite" ng-show="{{sample.tresponsive}}" data-transition="tablet" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="mobileIcon sprite" ng-show="{{sample.mresponsive}}" data-transition="mobile" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
+					<div class="deskIcon sprite" data-ng-class="{'pointer':sample.tresponsive}" data-transition="desktop" data-remove="desktop|tablet|mobile" data-ng-click="toggleGroup($event);"></div>
+					<div class="tabletIcon sprite" data-ng-class="{'pointer':sample.tresponsive}" data-ng-show="{{sample.tresponsive}}" data-transition="tablet" data-remove="desktop|tablet|mobile" data-ng-click="toggleGroup($event);"></div>
+					<div class="mobileIcon sprite" data-ng-class="{'pointer':sample.mresponsive}" data-ng-show="{{sample.mresponsive}}" data-transition="mobile" data-remove="desktop|tablet|mobile" data-ng-click="toggleGroup($event);"></div>
 				</div>
 				<div class="deskSample">
 					<div class="hideImg">
 						<a href="{{sample.href}}" target="_blank">
-							<img class="fluidImg" src="./images/{{sample.deskimg}}" alt="{{sample.client}} desktop sample image">
+							<img class="fluidImg" data-ng-src="./images/{{sample.deskimg}}" alt="{{sample.client}} desktop sample image">
 						</a>
 					</div>
 				</div>
 				<div class="tabletSample">
 					<div class="hideImg">
 						<a href="{{sample.href}}" target="_blank">
-							<img class="fluidImg" src="./images/{{sample.tabletimg}}" alt="{{sample.client}} tablet sample image">
+							<img class="fluidImg" data-ng-src="./images/{{sample.tabletimg}}" alt="{{sample.client}} tablet sample image">
 						</a>
 					</div>
 				</div>
 				<div class="mobileSample">
 					<div class="hideImg">
 						<a href="{{sample.href}}" target="_blank">
-							<img class="fluidImg" src="./images/{{sample.mobileimg}}" alt="{{sample.client}} mobile sample image">
+							<img class="fluidImg" data-ng-src="./images/{{sample.mobileimg}}" alt="{{sample.client}} mobile sample image">
 						</a>
 					</div>
 				</div>

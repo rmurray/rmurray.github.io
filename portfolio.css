@@ -68,7 +68,7 @@ footer .seperator {display:none;}
 .landing, .category {color:#777777; text-align:center;}
 .headline {font-size:2em; padding:0.1em 0 0 0;}
 .underHeadline {font-size:1.1em; padding:0 1em;}
-.catTitle {margin:0 0 10px 0; font-size:1.2em;}
+.catTitle {margin:0 0 10px 0; font-size:1.2em; font-family:orbitron;}
 .category {width:200px; margin:1.5em 2% 0 2%; display:inline-block; vertical-align:top;  text-decoration:none;}
 .category .graphic {height:200px; background-color:#f27620;}
 .portCont {height:200px; background-color:#f27620;}
@@ -103,10 +103,13 @@ footer .seperator {display:none;}
 /*.dropdown .descriptionCont {height:auto; width:90%; margin:1em auto; transition:width 1s;}*/
 .dropdown .descriptionCont {height:auto; width:90%; margin:1em auto;}
 .github {height:50px; width:50px; background-position:-250px -200px; display:inline-block; float:right;}
+.descriptionCont > ul {list-style:none;}
+.descriptionCont > ul > li {padding-left:15px; text-indent:-15px;}
+.descriptionCont > ul > li > span {font-weight:bold;}
 
 .fluidImg {height:auto; max-width:100%;}
 
-/*ME PAGE*/
+/*ME PAGE TODO : investigate complete parallax effect*/
 .parallax {height:100%; margin:0; overflow-x:hidden; overflow-y:auto; padding:0; perspective:1px; transform-style:preserve-3d;}
 .parallax h1 {font-size:250%;}
 .parallax p {color:#ffffff; font-size:140%; line-height:150%; position:relative; z-index:500;}
@@ -114,7 +117,7 @@ footer .seperator {display:none;}
 .parallax img {background:none repeat scroll 0 0 rgba(240, 230, 220, 0.7); border-radius:5px; box-shadow:0 0 8px rgba(0, 0, 0, 0.7); height:240px;
     left:35%; padding:10px; position:absolute; top:50%; transform:translateZ(0.25px) scale(0.75) translateX(-94%) translateY(-100%) rotate(2deg); width:320px;}
 .parallax img:last-of-type {transform: translateZ(0.4px) scale(0.6) translateX(-104%) translateY(-40%) rotate(-5deg);}
-.slide::before {bottom:0; content:""; left:0; position:absolute; right:0; top:0;}
+.slide::before {bottom:0; content:""; left:0;  right:0; top:0;} /* removed: position:absolute because effect broken in chrome */
 .title {background:none repeat scroll 0 0 rgba(2, 2, 2, 0.7); color:#f27620; padding:5%; width:100%;}
 .slide:nth-child(2n) .title {margin-left:0; margin-right:auto;}
 .slide:nth-child(2n+1) .title {margin-left:auto; margin-right:0;}
@@ -123,9 +126,11 @@ footer .seperator {display:none;}
 #title {background-attachment:fixed; background-image:url("./images/graph.jpg");}
 .parallax .skills {display:none;}
 /*#slide1::before {background-image:url("http://lorempixel.com/output/abstract-q-c-640-480-4.jpg"); transform:translateZ(-1px) scale(2);  z-index:-1;}*/
+#slide1 {background-image:url("./images/wave.jpg");} /* added extra bg-image declaration because broken in chrome */
 #slide1::before {background-image:url("./images/wave.jpg"); transform:translateZ(0) scale(1);  z-index:-1;}
 #slide2 {background-attachment:fixed; background-image:url("./images/pipes.jpg");}
 /*#slide3::before {background-image:url("http://lorempixel.com/output/abstract-q-c-640-480-5.jpg"); transform:translateZ(-1px) scale(2); z-index:-1;}*/
+#slide3 {background-image:url("./images/text.jpg");} /* added extra bg-image declaration because broken in chrome */
 #slide3::before {background-image:url("./images/text.jpg"); transform:translateZ(0) scale(1); z-index:-1;}
 .slide4 {background-attachment:fixed; background-image:url("./images/puzzle.jpg");}
 #slide5 {background:none repeat scroll 0 0 #222222;}
@@ -150,9 +155,14 @@ footer .seperator {display:none;}
 */
 
 /*ACCOLADES*/
-.label {width:60%; margin:1em auto; font-size:1.3em; color:#222222; text-align:center;}
+.accordion {margin:2em 0;}
+.item {width:95%; margin:0.1em auto; font-size:1.3em; text-align:center;}
+.label {padding:1em 0; background-color:#222222; color:#ffffff;}
 .text {display:none; margin:0 auto; overflow:hidden;}
-.text img {border:1px solid #cccccc; margin:1em 0;}
+.text img {border:1px solid #cccccc;}
+
+/*CODE SAMPLES*/
+.codeSamples h1 {color:#222222; text-align:center; font-family:orbitron; margin:5em 0;}
 
 @media screen and (min-width:640px) {
 	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top;}
@@ -248,8 +258,8 @@ footer .seperator {display:none;}
 	.dropdown .descriptionCont {width:30%; margin:1em 2%; float:left;}
 	
 	.descriptionCont > ul {padding:0; margin:0 0 1em 0;}
-	.descriptionCont > ul > li {padding-left:15px; text-indent:-15px;}
-	.descriptionCont > ul > li > span {font-weight:bold;}
+	
+	.accordion {margin:6em 0;}
 }
 
 @media screen and (min-width:1080px) {
@@ -271,6 +281,7 @@ footer .seperator {display:none;}
 	.category .graphic, .portCont {height:200px;}
 	
 	.siteContainer {width:30%; max-height:18.75em; min-height:18.7em; padding:1em 0; margin:1.2em 1% 0 1%; opacity:1;}
+	.siteContainer h2:hover {color:#f27620;}
 	.hide.siteContainer {min-height:0; height:0; width:0; opacity:0; margin:0; padding:0;}
 	.notInlineBlock.siteContainer {margin:1.2em 5% 0 5%; display:block;}
 	.dropdown.siteContainer {width:90%; max-height:130em; display:block;}
@@ -288,6 +299,9 @@ footer .seperator {display:none;}
 	.parallax .skills.skillsRight {left:54%;}
 	
 	.hideImg {max-height:10em;}
+	
+	.accordion {margin:4em 0;}
+	.item {width:60%;}
 }
 
 @media screen and (min-width:1081px) {
