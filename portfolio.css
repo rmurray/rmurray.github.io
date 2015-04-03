@@ -52,11 +52,11 @@ footer .fcont {font-size:1.3em;}
 footer a {display:block; padding:0 0 4px 0; color:#ffffff; text-decoration:none;}
 footer .mid {text-align:center;}
 footer .seperator {display:none;}
-.fSocialIcon {width:50px; height:50px; margin:10px; background-color:#777777; display:inline-block; background-position:-300px -200px;}
+.fSocialIcon {width:50px; height:50px; margin:9px; background-color:#777777; display:inline-block; background-position:-300px -200px;}
 .fLinkedin {background-position:-150px -200px;}
 .fGplus {background-position:-100px -200px;}
 .fEmail {background-position:-200px -200px;}
-.poweredBy {margin:10px 0;}
+.poweredBy {margin:10px 0; font-size:0.7em;}
 .pbIcon {width:50px; height:50px; margin:4px; display:inline-block; background-position:0 0;}
 .pbIcon.angular {background-position:-200px -150px;}
 .pbIcon.jquery {background-position:-391px 0px; top: 49.5%;}
@@ -171,7 +171,7 @@ footer .seperator {display:none;}
 	footer .left {width:22%; text-align:left; padding:10px 0 0 0;}
 	footer .right {text-align:center;}
 	footer .seperator {display:block; clear:both;}
-	.poweredBy {margin:0;}
+	.poweredBy {margin:0; font-size:1em;}
 	.mainImg {width:40%; float:left; margin:0 1em 1em 0;}
 	.underHeadline {padding:0;}
 }
