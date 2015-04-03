@@ -41,13 +41,14 @@ a.blockLink	{text-decoration:none; cursor:pointer;} /* used for #! anchors. IE n
 /* HEADER */
 .siteheader {height:50px; width:100%; background-color:#f27620; color:#ffffff; padding:0 5px;}
 .logo {height:30px; width:60px; margin:10px 5px; display:inline-block; background-position:-279px 0;}
-.logoText {display:inline-block; margin:0 0 10px 0; vertical-align:bottom; color:#ffffff; text-decoration:none;}
+.logoText {display:none; margin:0 0 10px 0; vertical-align:bottom; color:#ffffff; text-decoration:none;}
 .socialIcon {height:30px; width:30px; background-position:-213px 0; margin:10px 5px; display:block; float:right;}
 .mail {background-position:-246px 0;}
 .gplus {background-position:-179px 0}
 
 /* FOOTER */
 footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; padding:0.5em; clear:both; text-align:center; font-family:orbitron;}
+footer .fcont {font-size:1.3em;}
 footer a {display:block; padding:0 0 4px 0; color:#ffffff; text-decoration:none;}
 footer .mid {text-align:center;}
 footer .seperator {display:none;}
@@ -165,7 +166,8 @@ footer .seperator {display:none;}
 .codeSamples h1 {color:#222222; text-align:center; font-family:orbitron; margin:5em 0;}
 
 @media screen and (min-width:640px) {
-	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top;}
+	.logoText {display:inline-block;}
+	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top; font-size:1em;}
 	footer .left {width:22%; text-align:left; padding:10px 0 0 0;}
 	footer .right {text-align:center;}
 	footer .seperator {display:block; clear:both;}
@@ -181,9 +183,10 @@ footer .seperator {display:none;}
 	.headline {font-size:3em; padding:0.3em 0 0 0;}
 	.underHeadline {font-size:1.7em;}
 	.category {width:200px; margin:1.5em 2%;}
-	.catTitle {font-size:1.1em;}
+	.catTitle {font-size:1em;}
 	.category {width:150px;}
 	.category .graphic, .portCont {height:150px;}
+	.codeSample {font-size:590%;}
 
 	.logoCont {font-size:2em; padding:0.1em;}
 	.content {max-height:130em; overflow:hidden; transition:max-height 2s;}
@@ -279,6 +282,7 @@ footer .seperator {display:none;}
 	.category {width:200px;}
 	.catTitle {font-size:1.2em;}
 	.category .graphic, .portCont {height:200px;}
+	.codeSample {font-size:700%;}
 	
 	.siteContainer {width:30%; max-height:18.75em; min-height:18.7em; padding:1em 0; margin:1.2em 1% 0 1%; opacity:1;}
 	.siteContainer h2:hover {color:#f27620;}

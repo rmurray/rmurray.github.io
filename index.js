@@ -6,7 +6,7 @@ angular.module("index",["ngRoute"])
 		$routeProvider.when("/about",{
 			templateUrl:"templates/about.html"
 		});
-		$routeProvider.when("/portfolio",{
+		$routeProvider.when("/projects",{
 			templateUrl:"templates/portfolio.html"
 		});
 		$routeProvider.when("/codesamples",{
